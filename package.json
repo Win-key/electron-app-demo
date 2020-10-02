@@ -1,0 +1,14 @@
+{
+  "name": "s3downloadclient",
+  "version": "1.0.0",
+  "description": "S3 download client UI with electron JS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Venkatesh Rajendran",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^10.1.3"
+  }
+}
