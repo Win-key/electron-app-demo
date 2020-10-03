@@ -4,11 +4,46 @@
   "description": "S3 download client UI with electron JS",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "S3downloadClient",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/icon/win.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "src/icon/win.ico",
+      "uninstallerIcon": "src/icon/win.ico",
+      "uninstallDisplayName": "S3downloadClient",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "extraFiles": [
+      {
+        "from": "resources/bin",
+        "to": "Resources/bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
   },
   "author": "Venkatesh Rajendran",
   "license": "ISC",
   "dependencies": {
-    "electron": "^10.1.3"
+    "dotenv": "^8.2.0",
+    "jquery": "^3.5.1",
+    "js-datepicker": "^5.16.0"
+  },
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-builder": "^22.8.1"
   }
 }

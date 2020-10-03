@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/js-datepicker/dist/datepicker.min.css">
+    <title>Dowload S3 File</title>
+    <style>
+        body{
+            background-color: #eee;
+            margin: auto;
+        }
+        .center {
+            margin: auto;
+            margin-top: 25px;
+            width: 50%;
+            border-radius: 25px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h2>Dowload S3 File</h2>
+        <form>
+            <div class="form-group">
+                <label for="mydate">Date :</label>
+                <div style="position:relative">
+                    <input type="text" id="mydate" class="form-control" data-date-format="dd/mm/yyyy" placeholder="Select a Date">
+                </div> 
+            </div>    
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
